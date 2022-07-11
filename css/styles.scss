@@ -1,0 +1,217 @@
+// Primary
+$orange: hsl(25, 97%, 53%);
+
+// Neutral
+$white: hsl(0, 0%, 100%);
+$light-grey: hsl(217, 12%, 63%);
+$medium-grey: hsl(216, 12%, 54%);
+$dark-blue: hsl(213, 19%, 18%);
+$very-dark-blue: hsl(216, 12%, 8%);
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Overpass', sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    background-color: $very-dark-blue;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 24px;
+}
+
+.card {
+    background: rgb(24,30,39);
+    background: linear-gradient(0deg, rgba(24,30,39,1) 25%, rgba(35,42,52,1) 100%);
+    border-radius: 10px;
+    max-width: 412px;
+    max-height: 360px;
+}
+
+.first-card {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 24px 32px;
+
+    .star-img {
+        padding: 13.33px;
+        border-radius: 90px;
+        width: 40px;
+        height: 40px;
+        background-color: $dark-blue;
+    }
+    
+    .header {
+        padding: 16px 0 10px;
+        font-size: 24px;
+        color: $white;
+    }
+    
+    .subheader {
+        padding-bottom: 24px;
+        font-size: 14px;
+        color: $light-grey;
+        line-height: 1.5;
+    }
+
+    .rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-bottom: 24px;
+
+        .rating-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $dark-blue;
+            border-radius: 90px;
+            font-weight: 700;
+            color: $light-grey;
+            height: 42px;
+            width: 42px;
+        }
+
+        .rating-btn:hover {
+            background-color: $orange;
+            cursor: pointer;
+            color: $white;
+        }
+
+        .btn-active {
+            background-color: $medium-grey;
+            color: $white;
+        }
+
+    }
+
+    .submit-btn {
+        width: 100%;
+        color: $white;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        background-color: $orange;
+        padding: 12px 0;
+        border: none;
+        border-radius: 22.5px;
+    }
+
+    .submit-btn:hover {
+        background-color: $white;
+        color: $orange;
+        cursor: pointer;
+    }
+
+}
+
+.second-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 34px 24px 27px;
+
+    .thanks-img {
+        padding-bottom: 24px;
+    }
+
+    .selection {
+        font-size: 14px;
+        font-weight: 400;
+        color: $orange;
+        padding: 5px 12px;
+        background-color: $dark-blue;
+        border-radius: 20px;
+    }
+
+    .thanks-header {
+        color: $white;
+        font-size: 24px;
+        padding: 24px 0 17px;
+    }
+
+    .thanks-text {
+        color: $light-grey;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media screen and (min-width: 400px) {
+
+    .card {
+        min-height: 416px;
+    }
+
+    .first-card {
+        padding: 32px 40px 32px 32px;
+
+        .star-img {
+            padding: 13.33px;
+            border-radius: 90px;
+            width: 48px;
+            height: 48px;
+        }
+
+        .header {
+            padding: 30px 0 7px;
+            font-size: 28px;
+            color: $white;
+        }
+
+        .subheader {
+            font-size: 15px;
+            line-height: 24px;
+        }
+
+        .rating {
+            padding-bottom: 32px;
+    
+            .rating-btn {
+                height: 51px;
+                width: 51px;
+            }
+
+        }
+
+        .submit-btn {
+            font-size: 15px;
+        }
+    }
+
+    .second-card {
+        padding: 45px 40px 45px 32px;
+        
+        .thanks-img {
+            padding-bottom: 32px;
+        }
+
+        .selection {
+            font-size: 15px;
+            padding: 4px 19px;
+        }
+
+        .thanks-header {
+            color: $white;
+            font-size: 24px;
+            padding: 32px 0 7px;
+        }
+
+        .thanks-text {
+            font-size: 15px;
+        }
+    }
+}
